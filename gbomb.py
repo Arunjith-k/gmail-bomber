@@ -108,7 +108,7 @@ class Email_Bomber:
             self.s.login(self.fromAddr, self.fromPwd)
         except Exception as e:
             print(f,'ERROR: {e}')
-  def send(self):
+    def send(self):
         try:
             self.s.sendmail(self.fromAddr, self.target, self.msg)
             self.count +=1
