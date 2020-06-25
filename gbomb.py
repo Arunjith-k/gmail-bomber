@@ -123,3 +123,11 @@ class Email_Bomber:
         self.s.close()
         print(bcolors.RED + '\n+[+[+[ Attack finished ]+]+]+')
         sys.exit(0)
+
+
+if __name__=='__main__':
+    banner()
+    bomb = Email_Bomber()
+    bomb.bomb()
+    bomb.email()
+bomb.attack()
