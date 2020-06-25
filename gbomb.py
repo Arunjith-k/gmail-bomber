@@ -73,7 +73,7 @@ class Email_Bomber:
         except Exception as e:
             print(f,'ERROR: {e}')
 
-   def email(self):
+    def email(self):
         try:
             print(bcolors.RED + '\n+[+[+[ Setting up email ]+]+]+')
             self.server = str(input(bcolors.GREEN + 'Enter email server | or select premade options - 1:Gmail 2:Yahoo 3:Outlook <: '))
